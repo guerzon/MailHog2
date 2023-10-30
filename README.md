@@ -59,7 +59,11 @@ service mailhog start
 ```
 
 #### Docker
-[Run it from Docker Hub](https://registry.hub.docker.com/r/mailhog/mailhog/) or using the provided [Dockerfile](Dockerfile)
+Run it using the provided [Dockerfile](Dockerfile) or from GitHub Container Registry:
+
+```bash
+docker pull ghcr.io/guerzon/mailhog2
+```
 
 ### Configuration
 
