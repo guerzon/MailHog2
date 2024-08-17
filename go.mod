@@ -4,7 +4,7 @@ go 1.21.3
 
 require (
 	github.com/gorilla/pat v1.0.1
-	golang.org/x/crypto v0.14.0
+	golang.org/x/crypto v0.17.0
 )
 
 require (
