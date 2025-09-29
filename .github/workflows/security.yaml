@@ -8,6 +8,8 @@ on:
     branches:
       - main
     types: [opened, synchronize]
+  schedule:
+    - cron: '0 4 * * *' # Daily at 04:00 UTC
 
 jobs:
 
@@ -56,18 +58,3 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: snyk.sarif
-
-  sonarqube:
-    name: SonarQube
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v6
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
